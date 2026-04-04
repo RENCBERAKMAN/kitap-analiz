@@ -76,7 +76,7 @@ kitap-analiz/
 ### 1. Projeyi İndir
 
 ```bash
-git clone https://github.com/KULLANICI_ADIN/kitap-analiz.git
+git clone https://github.com/user/kitap-analiz.git
 ```
 
 ### 2. XAMPP'a Taşı
