@@ -28,7 +28,7 @@
   <div class="footer-stack">
     Google Books API
     <span class="footer-divider">·</span>
-    Gemini AI
+    Derin analiz
     <span class="footer-divider">·</span>
     PHP cURL
   </div>
