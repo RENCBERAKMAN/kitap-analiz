@@ -38,24 +38,28 @@ Midnight Library, herhangi bir kitap için yapay zeka destekli analiz sunan bir 
 ```
 kitap-analiz/
 │
-├── index.php              ← Ana sayfa (arama)
-├── book.php               ← Kitap detay & analiz sayfası
+├── index.php                    ← Homepage (search)
+├── book.php                     ← Book detail & AI analysis
+├── sorgu.php                    ← Thought challenger page
 │
 ├── config/
-│   ├── config.php         ← API key'ler (Git'e gitmiyor!)
-│   └── config.example.php ← Örnek config dosyası
+│   ├── config.php               ← API keys (NOT in Git)
+│   └── config.example.php       ← Example config file
 │
 ├── src/
 │   ├── Api/
-│   │   ├── GoogleBooksApi.php   ← Google Books API sınıfı
-│   │   └── GeminiApi.php        ← Gemini AI API sınıfı
-│   └── Cache/
-│       └── FileCache.php        ← Dosya tabanlı önbellek
+│   │   ├── GoogleBooksApi.php   ← Google Books API class
+│   │   └── GeminiApi.php        ← Gemini AI API class
+│   ├── Cache/
+│   │   └── FileCache.php        ← File-based cache
+│   └── Database/
+│       └── Database.php         ← MySQL PDO class
 │
-├── api/                   ← AJAX endpoint'leri
-│   ├── search.php         ← Kitap arama
-│   ├── analyze.php        ← AI analiz
-│   └── trending.php       ← Popüler kitaplar
+├── api/                         ← AJAX endpoints
+│   ├── search.php               ← Book search
+│   ├── analyze.php              ← AI book analysis
+│   ├── trending.php             ← Trending books
+│   └── sorgu.php                ← Thought analysis
 │
 ├── includes/
 │   ├── header.php
@@ -65,8 +69,11 @@ kitap-analiz/
 │   ├── css/style.css
 │   └── js/app.js
 │
-└── cache/                 ← Önbellek (Git'e gitmiyor)
-    └── .gitkeep
+├── cache/                       ← Cache files (NOT in Git)
+│   └── .gitkeep
+│
+├── database.sql                 ← Database setup script
+└── .gitignore
 ```
 
 ---
@@ -76,7 +83,7 @@ kitap-analiz/
 ### 1. Projeyi İndir
 
 ```bash
-git clone https://github.com/KULLANICI_ADIN/kitap-analiz.git
+git clone https://github.com/RENCBERAKMAN/kitap-analiz.git
 ```
 
 ### 2. XAMPP'a Taşı
